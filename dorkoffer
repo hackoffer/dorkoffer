@@ -1,0 +1,147 @@
+import pyfiglet
+import webbrowser
+
+
+
+
+
+print(pyfiglet.figlet_format("dork offer",justify="center"))
+
+
+nameweb=str(input("\033[32m enter your target (www + .nameweb + .com/ir/...) ="))
+print('\033[31m directory listing \033[32m>>>\033[33m 1 \t\t\t \033[31m configuration files \033[32m>>>\033[33m 2  \n\033[31m database files \033[32m>>>\033[33m 3 \t\t\t\t \033[31m wordpress \033[32m>>> \033[33m4 \n\033[31m log files \033[32m>>>\033[33m 5 \t\t\t\t\033[31m backup and old files \033[32m>>>\033[33m 6 \n\033[31m login pages \033[32m>>>\033[33m 7 \t\t\t\t\033[31m sql errors \033[32m>>>\033[33m 8 \n\033[31m apache config files \033[32m>>>\033[33m 9 \t\t\t\033[31m publicly exposed documents \033[32m>>>\033[33m 10 \n\033[31m phpinfo \033[32m>>>\033[33m 11 \t\t\t\t\033[31m finding backdoors \033[32m>>>\033[33m 12 \n\033[31m install/setup files \033[32m>>>\033[33m 13 \t\t\t\033[31m open redirects \033[32m>>>\033[33m 14 \n\033[31m apache strutsrce \033[32m>>>\033[33m 15 \t\t\t\033[31m 3rd party exposure \033[32m>>>\033[33m 16 \n\033[31m find pastebin entries \033[32m>>>\033[33m 17 \t\t\t\033[31m employees on linkedin \033[32m>>>\033[33m 18 \n\033[31m htaccess sensitive files \033[32m>>>\033[33m 19 \t\t\033[31m find subdomains \033[32m>>>\033[33m 20 \n\033[31m find sub-subdomaind \033[32m>>>\033[33m 21 \t\t\t\033[31m find wordpress #2 \033[32m>>>\033[33m 22 \n\033[31m search in bitbucket and atlassian \033[32m>>>\033[33m 23 \t\033[31m find wordpress \033[32m>>>\033[33m 24 \n\033[31m search in github \033[32m>>>\033[33m 25 \t\t\t\033[31m search in openbugbounty \033[32m>>>\033[33m 26 \n\033[31m search in reddit \033[32m>>>\033[33m 27 \t\t\t\033[31m test crossdomain \033[32m>>>\033[33m 28 \n\033[31m check in threatcrowd \033[32m>>>\033[33m 29 \t\t\t\033[31m git folder \033[32m>>>\033[33m 30 \n\033[31m find .swf file google \033[32m>>>\033[33m 31 \t\t\t\033[31m find .swf file yandex \033[32m>>>\033[33m 32 \n\033[31m search swf in wayback \033[32m>>>\033[33m 33 \t\t\t\033[31m search swf in wayback machine #2 \033[32m>>>\033[33m 34 \n\033[31m search swf in wayback machine #3 \033[32m>>>\033[33m 35 \t\033[31m reverse ip lookup \033[32m>>>\033[33m 36 \n\033[31m traefik \033[32m>>>\033[33m 37 \t\t\t\t\033[31m sourcecode publicwww \033[32m>>>\033[33m 38 \n\033[31m check in censys ip4 \033[32m>>>\033[33m 39 \t\t\t\033[31m check in censys domains \033[32m>>>\033[33m 40 \n\033[31m chack in censys  certs \033[32m>>>\033[33m 41 \t\t\t\033[31m search in shodan \033[32m>>>\033[33m 42 \n\033[31m cve-2020-0646 sharepoint rce \033[32m>>>\033[33m 43 \t\t\033[31m api endpoints-wsdl \033[32m>>>\033[33m 44 \n\033[31m github gist search \033[32m>>>\033[33m 45 \t\t\t\033[31m search in ct logs \033[32m>>>\033[33m 46 \n\033[31m robots.txt file \033[32m>>>\033[33m 47 \t\t\t\033[31m domaineye \033[32m>>>\033[33m  48 \n\033[31m check security headers \033[32m>>>\033[33m 49 \t\t\t\033[31m gitlab \033[32m>>>\033[33m 50 \n\033[31m passive total \033[32m>>>\033[33m 51 \t\t\t\t\033[31m search in stackoverflow \033[32m>>>\033[33m 52 \n\033[31m youtube \033[32m>>>\033[33m 53 \t\t\t\t\033[31m digital ocean spaces \033[32m>>>\033[33m 54 \n\033[31m cloud storage and buckets \033[32m>>>\033[33m 55 \t\t\033[31m s3 buckets \033[32m>>>\033[33m 56 \n\033[31m plaint password leak \033[32m>>>\033[33m 57 \t\t\t\033[31m what cms? \033[32m>>>\033[33m58 ')
+ 
+
+
+a=0
+while a<58:
+    typeattack=int(input('\n \n \033[32m enter the number :'))
+    if typeattack == 1:
+     webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' intitle:index.of')
+    elif typeattack==2:
+     webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' ext:xml | ext:conf | ext:cnf | ext:reg | ext:inf | ext:rdp | ext:cfg | ext:txt | ext:ora | ext:ini')
+    elif typeattack==3:
+       webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+ 'ext:sql | ext:dbf | ext:mdb')
+    elif typeattack==4:
+        webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' inurl:wp- | inurl:wp-content | inurl:plugins | inurl:uploads | inurl:themes | inurl:download')
+    elif typeattack==5:
+         webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' ext:log')
+    elif typeattack==6:
+         webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' ext:bkf | ext:bkp | ext:bak | ext:old | ext:backup')
+    elif typeattack==7:
+          webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' inurl:login | inurl:signin | intitle:Login | intitle: signin | inurl:auth')
+    elif typeattack==8:
+          webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' intext:"sql syntax near" | intext:"syntax error has occurred" | intext:"incorrect syntax near" | intext:"unexpected end of SQL command" | intext:"Warning: mysql_connect()" | intext:"Warning: mysql_query()" | intext:"Warning: pg_connect()"')
+    elif typeattack==9:
+           webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' filetype:config "apache"')
+    elif typeattack==10:
+           webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv')
+    elif typeattack==11:
+           webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' ext:php intitle:phpinfo "published by the PHP Group"')
+    elif typeattack==12:
+           webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' inurl:shell | inurl:backdoor | inurl:wso | inurl:cmd | shadow | passwd | boot.ini | inurl:backdoor')
+    elif typeattack==13:
+           webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' inurl:readme | inurl:license | inurl:install | inurl:setup | inurl:config')
+    elif typeattack==14:
+           webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' inurl:redir | inurl:url | inurl:redirect | inurl:return | inurl:src=http | inurl:r=http')
+    elif typeattack==15:
+           webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' ext:action | ext:struts | ext:do')
+    elif typeattack==16:
+           webbrowser.open('https://www.google.com/search?q='+'site:http://ideone.com | site:http://codebeautify.org | site:http://codeshare.io | site:http://codepen.io | site:http://repl.it | site:http://justpaste.it | site:http://pastebin.com | site:http://jsfiddle.net | site:http://trello.com | site:*.atlassian.net | site:bitbucket.org "'+nameweb+'"')
+    elif typeattack==17:
+           webbrowser.open('https://www.google.com/search?q='+'site:pastebin.com'+ nameweb)
+    elif typeattack==18:
+           webbrowser.open('https://www.google.com/search?q='+'site:linkedin.com employees '+nameweb)
+    elif typeattack==19:
+           webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' inurl:"/phpinfo.php" | inurl:".htaccess"')
+    elif typeattack==20:
+           webbrowser.open('https://www.google.com/search?q='+'site:*.'+nameweb)
+    elif typeattack==21:
+           webbrowser.open('https://www.google.com/search?q='+'site:*.*.'+nameweb)
+    elif typeattack==22:
+           webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' inurl:wp-content | inurl:wp-includes')
+    elif typeattack==23:
+           webbrowser.open('https://www.google.com/search?q='+'site:atlassian.net | site:bitbucket.org "'+nameweb+'"')
+    elif typeattack==24:
+           webbrowser.open('http://wwwb-dedup.us.archive.org:8083/cdx/search?url='+nameweb+'/&matchType=domain&collapse=digest&output=text&fl=original,timestamp&filter=urlkey:.*wp[-].*&limit=1000000&xx=')
+    elif typeattack==25:
+           webbrowser.open('https://github.com/search?q=%22*.'+nameweb+'%22&type=repositories')
+    elif typeattack==26:
+           webbrowser.open('https://www.openbugbounty.org/search/?search='+nameweb)
+    elif typeattack==27:
+           webbrowser.open('https://www.reddit.com/search/?q='+nameweb)
+    elif typeattack==28:
+           webbrowser.open('https://www.google.com/search?q='+nameweb+'/crossdomain.xml')
+    elif typeattack==29:
+           webbrowser.open('https://threatcrowd.org/domain.php?domain='+nameweb)
+    elif typeattack==30:
+           webbrowser.open('https://www.google.com/search?q='+'inurl:"/.git "'+nameweb+' -github')
+    elif typeattack==31:
+           webbrowser.open('https://www.google.com/search?q='+'inurl:'+nameweb+' ext:swf')
+    elif typeattack==32:
+           webbrowser.open('https://yandex.com/search?text=site%3A'+nameweb+'++mime%3Aswf&lr=21377')
+    elif typeattack==33:
+           webbrowser.open('https://web.archive.org/cdx/search?url='+nameweb+'/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=urlkey:.*swf&limit=100000')
+    elif typeattack==34:
+           webbrowser.open('https://web.archive.org/cdx/search?url='+nameweb+'/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=mimetype:application/x-shockwave-flash&limit=100000')
+    elif typeattack==35:
+           webbrowser.open('https://web.archive.org/web/*/'+nameweb+'/*')
+    elif typeattack==36:
+           webbrowser.open('https://viewdns.info/reverseip/?host='+nameweb+'&t=1')
+    elif typeattack==37:
+           webbrowser.open('https://www.google.com/search?q='+'intitle:traefik inurl:8080/dashboard"'+nameweb+'"')
+    elif typeattack==38:
+           webbrowser.open('https://publicwww.com/websites/%22'+nameweb+'%22/')
+    elif typeattack==39:
+           webbrowser.open('https://search.censys.io/search?resource=hosts')
+    elif typeattack==40:
+           webbrowser.open('https://search.censys.io/domain?q='+nameweb)
+    elif typeattack==41:
+           webbrowser.open('https://search.censys.io/certificates?q='+nameweb)
+    elif typeattack==42:
+           webbrowser.open('https://www.shodan.io/search?query='+nameweb)
+    elif typeattack==43:
+           webbrowser.open('https://www.google.com/search?q='+'.sharepoint.com/_vti_bin/webpartpages/asmx -docs -msdn -mdsec site:'+nameweb)
+    elif typeattack==44:
+              webbrowser.open('https://www.google.com/search?q='+'site:'+nameweb+' filetype:wsdl | filetype:WSDL | ext:svc | inurl:wsdl | Filetype: ?wsdl | inurl:asmx?wsdl | inurl:jws?wsdl | intitle:_vti_bin/sites.asmx?wsdl | inurl:_vti_bin/sites.asmx?wsdl')
+    elif typeattack==45:
+           webbrowser.open('https://gist.github.com/search?q=*.%22'+nameweb+'%22')
+    elif typeattack==46:
+           webbrowser.open('https://crt.sh/?q='+nameweb)
+    elif typeattack==47:
+           webbrowser.open('https://www.google.com/search?q='+nameweb+'/robots.txt')
+    elif typeattack==48:
+           webbrowser.open('https://domaineye.com/similar/'+nameweb)
+    elif typeattack==49:
+           webbrowser.open('https://securityheaders.com/?q='+nameweb+'&followRedirects=on')
+    elif typeattack==50:
+           webbrowser.open('https://www.google.com/search?q='+'inurl:gitlab '+nameweb)
+    elif typeattack==51:
+           webbrowser.open('https://community.riskiq.com/search/'+nameweb)
+    elif typeattack==52:
+           webbrowser.open('https://www.google.com/search?q='+'site:stackoverflow.com "'+nameweb+'"')
+    elif typeattack==53:
+           webbrowser.open('https://www.youtube.com/results?search_query='+nameweb)
+    elif typeattack==54:
+           webbrowser.open('https://www.google.com/search?q='+'site:digitaloceanspaces.com "'+nameweb+'"')
+    elif typeattack==55:
+           webbrowser.open('https://cse.google.com/cse?cx=002972716746423218710:veac6ui3rio#gsc.tab=0&gsc.q='+nameweb)
+    elif typeattack==56:
+           webbrowser.open('https://www.google.com/search?q='+'site:.s3.amazonaws.com "'+nameweb+'"')
+    elif typeattack==57:
+           webbrowser.open('https://www.google.com/search?q='+'site:throwbin.io '+nameweb)
+    elif typeattack==58:
+           webbrowser.open('https://whatcms.org/?s='+nameweb)
+           a+=1
+
+
+
+
+
+
+
+
+
+
+
+
